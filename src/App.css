@@ -1,10 +1,38 @@
+/* body {
+  background: linear-gradient( #FFF6B7, 
+  #F6416C);
+} */
 .App {
   text-align: center;
 }
-
+.navBar {
+  background: linear-gradient(90deg, #FFF6B7, 
+  #F6416C);
+} 
+.jumb {
+  background: linear-gradient(90deg, #FFF6B7, 
+  #F6416C);
+  margin-bottom: 0 !important;
+}
+.foot,
+.main  {
+  background: linear-gradient(90deg, #FFF6B7, 
+  #F6416C);
+  border-top: none !important;
+}
+h5 {
+  margin-bottom: 0 !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.right {
+  text-align: right;
 }
 
 @media (prefers-reduced-motion: no-preference) {

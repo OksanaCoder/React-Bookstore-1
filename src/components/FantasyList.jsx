@@ -1,15 +1,37 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import data from '../jsons/fantasy.json';
 
 
 
+class FantasyList extends Component {
+  render() {
 
-const FantasyList = () => {
+  const books = data;
     return (
-        <Container className="main" fluid>
-          <h5>Fantasy Books</h5>
-        </Container>
-    )
-}
 
+   <div className="row">
+       {books.map(book=> {
+           return(
+               <div className="col-3">
+                   <Card>
+                       <Card.Img src={book.img} />
+                   </Card>
+                   <Card.Body>
+                       <Card.Title>{book.title}</Card.Title>
+                       <Card.Text>{Card.Category}</Card.Text>
+                       <div>
+                           <span>${book.price}</span>
+                           <Button>Add to cart</Button>
+                       </div>
+                      
+                   </Card.Body>
+                   </div>
+           )
+       })}
+   </div>
+    )
+
+  }
+}
 export default FantasyList;

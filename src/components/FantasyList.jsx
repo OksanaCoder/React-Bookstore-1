@@ -10,22 +10,24 @@ class FantasyList extends Component {
   const books = data;
     return (
 
-   <div className="row">
+   <div className="row list-books">
        {books.map(book=> {
            return(
-               <div className="col-3">
+            
+               <div className="col-sm-6 col-md-3 col-lg-3">
                    <Card>
                        <Card.Img src={book.img} />
-                   </Card>
+                       </Card>
                    <Card.Body>
                        <Card.Title>{book.title}</Card.Title>
                        <Card.Text>{Card.Category}</Card.Text>
-                       <div>
+                       <div className="footerCard">
                            <span>${book.price}</span>
                            <Button>Add to cart</Button>
                        </div>
                       
                    </Card.Body>
+                  
                    </div>
            )
        })}

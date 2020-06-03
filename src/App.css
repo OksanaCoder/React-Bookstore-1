@@ -23,6 +23,20 @@
 h5 {
   margin-bottom: 0 !important;
 }
+.footerCard {
+  display: flex;
+  justify-content: space-between;
+}
+.row{
+  margin-right:0 !important;
+    margin-left: 0 !important;
+}
+.list-books {
+  background: linear-gradient(90deg, #FFF6B7, 
+  #F6416C);
+
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

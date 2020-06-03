@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import data from '../jsons/fantasy.json';
-
+import { FaCartPlus } from 'react-icons/fa';
 
 
 class FantasyList extends Component {
@@ -9,21 +9,22 @@ class FantasyList extends Component {
 
   const books = data;
     return (
-
-   <div className="row list-books">
+<div className="container list-books">
+   <div className="row">
+       
        {books.map(book=> {
            return(
-            
-               <div className="col-sm-6 col-md-3 col-lg-3">
+             
+               <div className="col-sm-6 col-md-3 col-lg-2 ">
                    <Card>
-                       <Card.Img src={book.img} />
-                       </Card>
+                       <Card.Img src={book.img}/>
+                    </Card>
                    <Card.Body>
-                       <Card.Title>{book.title}</Card.Title>
+                       <Card.Title className='title-size'>{book.title}</Card.Title>
                        <Card.Text>{Card.Category}</Card.Text>
                        <div className="footerCard">
                            <span>${book.price}</span>
-                           <Button>Add to cart</Button>
+                           <Button className='btn-add'><FaCartPlus /></Button>
                        </div>
                       
                    </Card.Body>
@@ -31,6 +32,7 @@ class FantasyList extends Component {
                    </div>
            )
        })}
+   </div>
    </div>
     )
 
